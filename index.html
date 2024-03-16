@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: radial-gradient(#e66465, #9198e5);        
+        }
+        @keyframes move1 {
+            0%{
+                /* transform: translateX(-500px); */
+
+            }
+            70%{
+
+                filter: blur(5px);
+            }
+            100% {
+                transform: translateX(500px);
+            }
+
+        }
+
+        @keyframes move {
+            20%{
+                filter: blur(5px);  
+                /* transform: translateX(500px); */
+
+            }
+            100% {
+                transform: translateX(-500px);
+            }
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin-top: 100px;
+        }
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        div > img:nth-last-of-type(1){
+            animation: move 2s infinite; 
+            /* transform: translateX(1000px); */
+        }
+        div > img:nth-last-of-type(2){
+            animation: move1 2s infinite; 
+            /* transform: translateX(-1000px); */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://i.pinimg.com/originals/03/a4/d5/03a4d55748dfefa852df76b085708c0a.png" alt="">
+        <img src="https://pngimg.com/d/tom_and_jerry_PNG58.png" alt="">
+    </div>
+    
+</body>
+</html>
